@@ -1,0 +1,7 @@
+Tengo un dominio desde el año pasado: http://gastontrotteyn.com.ar/
+
+y acabo de redirigirlo a http://gastontrottcode.000webhostapp.com/
+
+Voy a construir un sitio para mostrar mis habilidades como programador, para que funcione como un soporte del CV y el perfil de LinkedIn.
+
+Planeo incorporarle una página inicial con foto de perfil y algunos datos relevantes. Luego, otras secciones con la formación, los proyectos en github, el 'perfil personal'(con gustos y hobbies), etc.
