@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contactame</title>
+	</head>
+	<body>
+		<section>
+			<form action="">
+				<div>
+					<label for="nombre">Tu nombre</label>
+					<input type="text" name="nombre" placeholder="Por favor, usá mayúsculas" />
+				</div>
+				<div>
+					<label for="apellido">Tu apellido</label>
+					<input type="text" name="apellido" placeholder="Por favor, usá mayúsculas" />
+				</div>
+				<div>
+					<label for="conocido">Ya nos conocemos?</label>
+					<input type="checkbox" name="conocido" />
+				</div>
+				<div>
+					<label for="sexo">Cómo te definís?</label>
+					<ul>
+						<li>
+							<input type="radio" name="sexo" value="mujer" />
+							<label>MUJER</label>
+						</li>
+						<li>
+							<input type="radio" name="sexo" value="hombre" />
+							<label>HOMBRE</label>
+						</li>
+						<li>
+							<input type="radio" name="sexo" value="elijoNoDecir" />
+							<label>Prefiero no decir</label>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<label for="nivelAceptacion">cuánto estarías dispuesto a contratarme?</label>
+
+					<select name="nivelAceptacion" id="nivAcep">
+						<option value="5">definitivamente</option>
+						<option value="4">bastante probable</option>
+						<option value="3">puede que sí, puede que no</option>
+						<option value="2">estemmmm....</option>
+						<option value="1">está difícil che</option>
+					</select>
+				</div>
+				<div>
+					<label for="motivo">Bueno, pero ¿por qué?</label>
+					<textarea name="motivo" id="motivo" cols="30" rows="10"></textarea>
+				</div>
+				<input type="submit" value="enviar" />
+			</form>
+		</section>
+		<footer>
+			<h6>
+				si querés
+				<a href="./CV.html" target="_blank">volver</a>
+			</h6>
+		</footer>
+	</body>
+</html>
