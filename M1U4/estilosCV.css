@@ -1,5 +1,6 @@
 body {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	width: 500px;
 }
 header {
 	background-color: rgb(165, 42, 42, 0.3);
@@ -12,11 +13,23 @@ header {
 h1 {
 	color: rgb(165, 42, 42, 1);
 	text-align: center;
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 700;
+}
+
+h1:hover {
+	color: rgb(165, 42, 42, 0.8);
+}
+
+#subtitle:hover {
+	background: linear-gradient(90deg, rgb(165, 42, 42, 0), rgb(165, 42, 42, 0.5));
 }
 
 #subtitle {
 	text-align: right;
 	color: rgb(165, 42, 42, 0.7);
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 300;
 	font-style: italic;
 }
 
@@ -29,4 +42,20 @@ img {
 
 h4 {
 	margin-left: 50px;
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 700;
+	color: rgb(113, 29, 29);
+}
+h5 {
+	border: 2px solid rgb(165, 42, 42, 1);
+	padding: 5px;
+	box-shadow: 5px 5px 5px rgb(165, 42, 42, 0.3);
+	border-radius: 5px;
+}
+ul {
+	list-style: none;
+}
+p {
+	column-count: 2;
+	column-gap: 20px;
 }
