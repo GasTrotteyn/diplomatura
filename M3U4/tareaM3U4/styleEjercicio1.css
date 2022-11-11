@@ -1,0 +1,16 @@
+.contenedor {
+	width: 100%;
+	height: 100vh;
+	background-color: beige;
+}
+.rojo {
+	background-color: red;
+}
+
+.azul {
+	background-color: blue;
+}
+
+.amarillo {
+	background-color: yellow;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contador de caracteres</title>
+	</head>
+	<body>
+		<textarea name="textArea" id="textArea" cols="30" rows="10"></textarea>
+		<div id="contador">Cuando vos escribas arriba, yo te cuento las letras</div>
+	</body>
+	<script>
+		const textArea = document.getElementById('textArea');
+		let contador = document.getElementById('contador');
+		const actualizarContador = (e) => {
+			contador.innerText = `Has escrito ${e.target.value.length} caracteres`;
+		};
+		textArea.addEventListener('keyup', (e) => {
+			actualizarContador(e);
+		});
+	</script>
+</html>

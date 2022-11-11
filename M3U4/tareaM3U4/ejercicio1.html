@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styleEjercicio1.css" />
+		<title>botones que colorean</title>
+	</head>
+	<body>
+		<div id="contenedor" class="contenedor">
+			<button id="rojo">rojo</button>
+			<button id="azul">azul</button>
+			<button id="amarillo">amarillo</button>
+		</div>
+		<script>
+			let contenedor = document.getElementById('contenedor');
+			let btnRojo = document.getElementById('rojo');
+			let btnAzul = document.getElementById('azul');
+			let btnAmarillo = document.getElementById('amarillo');
+			const colorear = (e) => {
+				contenedor.classList = ['contenedor'];
+				//console.log(e);
+				contenedor.classList.add(e.target.id);
+			};
+			btnRojo.addEventListener('click', colorear);
+			btnAzul.addEventListener('click', colorear);
+			btnAmarillo.addEventListener('click', colorear);
+		</script>
+	</body>
+</html>
