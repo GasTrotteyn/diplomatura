@@ -1,0 +1,16 @@
+<h1>esto es una prueba</h1>
+{{#if logueado}}
+	<p>Bienvenido {{nombre}}</p>
+	<h4>ya entraste {{cantidad}} veces</h4>
+	<a href='/destruir'>salir</a>
+{{/if}}
+
+{{#unless logueado}}
+	<p>no te has logueado</p>
+	<form action='/entrando' method='post'>
+		<input type='text' name='nombreEnviado' />
+		<button>enviar</button>
+	</form>
+	<h4>ya entraste {{cantidad}} veces</h4>
+{{/unless}}
+<h3>entraste por: {{{url}}}</h3>
