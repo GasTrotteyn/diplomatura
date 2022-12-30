@@ -43,7 +43,8 @@ app.use('/users', usersRouter);
 //pool.query('update empleados set salario=300000 where id_emp=23').then((res) => console.log(res));
 
 //delete
-pool.query('delete from empleados where id_emp=23').then((resp) => console.log(resp));
+//pool.query('delete from empleados where id_emp=23').then((resp) => console.log(resp));
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
 	next(createError(404));
