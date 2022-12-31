@@ -26,7 +26,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 //select
-//pool.query('select * from empleados').then((resp) => console.log(resp));
+pool.query('select * from empleados').then((resp) => console.log(resp));
 
 //insert
 // const nuevoEmpleado = {
