@@ -1,0 +1,34 @@
+<h1>Bienvenido a la página para administrar los precios de Patavans</h1>
+<h3>desde aquí podrá modificar los valores que aparecen en la web</h3>
+{{#if logueado}}
+	<h3>Hola {{nombre}}, estás logueado.</h3>
+	<a href='/destruir'>salir</a>
+
+	<div style='margin: 50px; width: 250px; border: blue solid 2px'>
+		<a href='/precios/crearItem'>crear un nuevo item</a>
+	</div>
+	<table class='table'>
+		<thead>
+			<tr class='table-dark'>
+				<th scope='col'>#</th>
+				<th scope='col'>Item</th>
+				<th scope='col'>Price</th>
+				<th scope='col'>isElectric</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			{{#each precios}}
+				<tr style='font-size: 20px; line-height: 40px'>
+					<th scope='row'>{{id}}&nbsp &nbsp</th>
+					<td>{{item}} &nbsp &nbsp</td>
+					<td>{{price}} &nbsp &nbsp</td>
+					<td>{{electric}} &nbsp &nbsp</td>
+					<td> <a href='/precios/modificarItem/{{id}}'>modificar</a></td>
+					<td> <a href='/precios/eliminarItem/{{id}}'>eliminar</a></td>
+				</tr>
+
+			{{/each}}
+		</tbody>
+	</table>
+{{/if}}

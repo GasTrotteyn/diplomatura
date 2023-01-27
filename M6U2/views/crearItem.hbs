@@ -1,0 +1,17 @@
+<div>
+	<form action='/precios/crearItem' method='post'>
+		<div>
+			<input type='text' placeholder='nomre del nuevo item' name='item' />
+		</div>
+		<div>
+			<input type='text' placeholder='precio (incluir el signo $)' name='price' />
+		</div>
+		<div>
+			<input type='number' placeholder='es un componente eléctrico?' name='electric' />
+		</div>
+		<button type='submit'>Crear</button>
+	</form>
+	{{#if error}}
+		<h5>{{message}}</h5>
+	{{/if}}
+</div>
