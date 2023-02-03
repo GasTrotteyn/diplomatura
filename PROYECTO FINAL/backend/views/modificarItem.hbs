@@ -1,0 +1,28 @@
+<div>
+	<form action='/precios/modificarItem' method='post'>
+		<input type='hidden' name='id' value='{{item.id}}' />
+		<div>
+			<input type='text' placeholder='nuevo item' name='item' value='{{item.item}}' />
+		</div>
+		<div>
+			<input
+				type='text'
+				placeholder='nuevo precio (incluir el signo $)'
+				name='price'
+				value='{{item.price}}'
+			/>
+		</div>
+		<div>
+			<input
+				type='number'
+				placeholder='es un componente eléctrico?'
+				name='electric'
+				value='{{item.electric}}'
+			/>
+		</div>
+		<button type='submit'>Modificar</button>
+	</form>
+	{{#if error}}
+		<h5>{{message}}</h5>
+	{{/if}}
+</div>

@@ -1,0 +1,24 @@
+<h1>Bienvenido a la página para administrar los precios de Patavans</h1>
+{{#if logueado}}
+	<p>Hola {{nombre}}</p>
+	{{!-- <h4>ya entraste {{cantidad}} veces</h4> --}}
+	<a href='/destruir'>salir</a>
+{{/if}}
+
+{{#unless logueado}}
+	<p>no te has logueado</p>
+	<form action='/entrando' method='post'>
+		<div style='margin: 25px'>
+			<label for='nombreEnviado'>nombre de usuario</label>
+			<input type='text' name='nombreEnviado' />
+		</div>
+		<div style='margin: 25px'>
+			<label for='password'>Contraseña</label>
+			<input type='text' name='password' />
+		</div>
+		<button type='submit'>enviar</button>
+	</form>
+	{{#if error}}
+		<p>usuario o contraseña equivocados</p>
+	{{/if}}
+{{/unless}}
