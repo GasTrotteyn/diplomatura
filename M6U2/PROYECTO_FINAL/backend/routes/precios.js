@@ -18,7 +18,7 @@ router.get('/crearItem', async (req, res, next) => {
 
 router.post('/crearItem', async (req, res, next) => {
 	try {
-		if ((req.body.item != '', req.body.price != '', req.body.electric != undefined)) {
+		if ((req.body.item != '', req.body.price != '', req.body.electric != '')) {
 			await preciosModel.insertPrecio(req.body);
 			res.redirect('/precios');
 		} else {

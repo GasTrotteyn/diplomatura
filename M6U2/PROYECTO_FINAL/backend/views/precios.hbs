@@ -1,34 +1,69 @@
-<h1>Bienvenido a la página para administrar los precios de Patavans</h1>
-<h3>desde aquí podrá modificar los valores que aparecen en la web</h3>
+<h1
+	style='color: rgb(10, 10, 51); padding: 30px; border: 2px solid rgb(10, 10, 51); border-radius: 15px'
+>Bienvenid@ a la página para administrar los precios de Patavans</h1>
+<h3 style='font-style: italic; text-align:right'>* desde aquí podrá modificar los valores que
+	aparecen en la web</h3>
 {{#if logueado}}
-	<h3>Hola {{nombre}}, estás logueado.</h3>
-	<a href='/destruir'>salir</a>
+	<h3 style='font-style: italic; margin: 50px 0'>Hola {{nombre}}, estás loguead@.</h3>
+	<a
+		style='color: rgb(10, 10, 51); text-decoration: none; padding: 15px; border: 2px solid rgb(10, 10, 51); border-radius: 15px; background-color:rgba(10, 10, 51, 0)'
+		href='/destruir'
+	>salir</a>
 
-	<div style='margin: 50px; width: 250px; border: blue solid 2px'>
-		<a href='/precios/crearItem'>crear un nuevo item</a>
+	<div style='margin-top: 60px;'>
+		<a
+			href='/precios/crearItem'
+			style='color: rgb(10, 10, 51); text-decoration: none; padding: 15px; border: 2px solid rgb(10, 10, 51); border-radius: 15px; background-color:rgba(10, 10, 51, 0)'
+		>crear un nuevo item</a>
 	</div>
-	<table class='table'>
-		<thead>
-			<tr class='table-dark'>
-				<th scope='col'>#</th>
-				<th scope='col'>Item</th>
-				<th scope='col'>Price</th>
-				<th scope='col'>isElectric</th>
-			</tr>
-		</thead>
-		<tbody>
-
-			{{#each precios}}
-				<tr style='font-size: 20px; line-height: 40px'>
-					<th scope='row'>{{id}}&nbsp &nbsp</th>
-					<td>{{item}} &nbsp &nbsp</td>
-					<td>{{price}} &nbsp &nbsp</td>
-					<td>{{electric}} &nbsp &nbsp</td>
-					<td> <a href='/precios/modificarItem/{{id}}'>modificar</a></td>
-					<td> <a href='/precios/eliminarItem/{{id}}'>eliminar</a></td>
+	<div
+		style='margin-top: 80px; color: rgb(10, 10, 51); text-decoration: none; padding: 15px; border: 2px solid rgb(10, 10, 51); border-radius: 15px; background-color:rgba(10, 10, 51, 0)'
+	>
+		<table class='table'>
+			<thead>
+				<tr class='table-dark'>
+					<th
+						style='color: white; text-decoration: none; padding: 15px; border: 2px solid rgb(10, 10, 51); border-radius: 15px; background-color:rgba(10, 10, 51); margin:10px'
+						scope='col'
+					>#
+					</th>
+					<th
+						style='color: white; text-decoration: none; padding: 15px; border: 2px solid rgb(10, 10, 51); border-radius: 15px; background-color:rgba(10, 10, 51); margin:10px'
+						scope='col'
+					>Item
+					</th>
+					<th
+						style='color: white; text-decoration: none; padding: 15px; border: 2px solid rgb(10, 10, 51); border-radius: 15px; background-color:rgba(10, 10, 51); margin:10px'
+						scope='col'
+					>Price
+					</th>
+					<th
+						style='color: white; text-decoration: none; padding: 15px; border: 2px solid rgb(10, 10, 51); border-radius: 15px; background-color:rgba(10, 10, 51); margin:10px'
+						scope='col'
+					>isElectric
+					</th>
 				</tr>
+				</div>
+			</thead>
+			<tbody>
 
-			{{/each}}
-		</tbody>
-	</table>
+				{{#each precios}}
+					<tr style='font-size: 20px; line-height: 80px'>
+						<th scope='row'>{{id}}&nbsp &nbsp</th>
+						<td>{{item}} &nbsp &nbsp</td>
+						<td>{{price}} &nbsp &nbsp</td>
+						<td>{{electric}} &nbsp &nbsp</td>
+						<td> <a style='margin-top: 80px; color: rgb(10, 10, 51); text-decoration: none; padding: 15px; border: 2px solid rgb(10, 10, 51); border-radius: 15px; background-color:rgba(10, 10, 51, 0)'
+	
+						href='/precios/modificarItem/{{id}}'>modificar</a></td>
+						<td> <a 
+						style='margin-top: 80px; color: rgb(10, 10, 51); text-decoration: none; padding: 15px; border: 2px solid rgb(10, 10, 51); border-radius: 15px; background-color:rgba(10, 10, 51, 0)'
+	
+						href='/precios/eliminarItem/{{id}}'>eliminar</a></td>
+					</tr>
+
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
 {{/if}}

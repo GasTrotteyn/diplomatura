@@ -1,24 +1,32 @@
-<h1>Bienvenido a la página para administrar los precios de Patavans</h1>
+<h1
+	style='color: rgb(10, 10, 51); padding: 30px; border: 2px solid rgb(10, 10, 51); border-radius: 15px'
+>Bienvenid@ a la página para administrar los precios de Patavans</h1>
 {{#if logueado}}
-	<p>Hola {{nombre}}</p>
-	{{!-- <h4>ya entraste {{cantidad}} veces</h4> --}}
-	<a href='/destruir'>salir</a>
+	<p style='margin-bottom: 50px;'>Hola {{nombre}}</p>
+
+	<a
+		style='color: rgb(10, 10, 51); text-decoration: none; padding: 15px; border: 2px solid rgb(10, 10, 51); border-radius: 15px'
+		href='/destruir'
+	>salir</a>
 {{/if}}
 
 {{#unless logueado}}
-	<p>no te has logueado</p>
+	<p style='font-style: italic;'>no te has logueado</p>
 	<form action='/entrando' method='post'>
 		<div style='margin: 25px'>
 			<label for='nombreEnviado'>nombre de usuario</label>
-			<input type='text' name='nombreEnviado' />
+			<input style='margin: 15px' type='text' name='nombreEnviado' />
 		</div>
 		<div style='margin: 25px'>
 			<label for='password'>Contraseña</label>
-			<input type='text' name='password' />
+			<input style='margin: 15px' type='text' name='password' />
 		</div>
-		<button type='submit'>enviar</button>
+		<button
+			style='color: rgb(10, 10, 51); text-decoration: none; padding: 15px; border: 2px solid rgb(10, 10, 51); border-radius: 15px; background-color:rgba(10, 10, 51, 0)'
+			type='submit'
+		>enviar</button>
 	</form>
 	{{#if error}}
-		<p>usuario o contraseña equivocados</p>
+		<p style='font-style: italic;'>usuario o contraseña equivocados</p>
 	{{/if}}
 {{/unless}}
